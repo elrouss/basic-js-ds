@@ -45,9 +45,7 @@ class Stack {
     return current.element;
   }
 
-  peek() {
-    return this.head.element;
-  }
+  peek = () => this.head.element;
 }
 
 module.exports = {
