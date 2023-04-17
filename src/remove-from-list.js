@@ -22,17 +22,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  *   }
  * }
  */
-function convertArrayToList(arr) {
-  return arr.reverse().reduce((acc, cur) => {
-    if (acc) {
-      const node = new ListNode(cur);
-      node.next = acc;
-      return node;
-    }
-
-    return new ListNode(cur);
-  }, null);
-}
 
 function removeKFromList(list, k) {
   if (!k || !list) return null;
