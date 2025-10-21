@@ -1,5 +1,3 @@
-const { NotImplementedError } = require('../lib/errors');
-
 /**
  * Implement the Stack with a given interface via array.
  *
@@ -39,13 +37,13 @@ class Stack {
   pop() {
     const current = this.head;
 
-    this.head = this.head.next;
+    this.head = this.head?.next;
     this.length--;
 
-    return current.element;
+    return current?.element;
   }
 
-  peek = () => this.head.element;
+  peek = () => this.head?.element;
 }
 
 module.exports = {
